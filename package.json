@@ -1,0 +1,24 @@
+{
+  "name": "tribble",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwin-rodriguez/tribble.git"
+  },
+  "author": "edwin-rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwin-rodriguez/tribble/issues"
+  },
+  "homepage": "https://github.com/edwin-rodriguez/tribble#readme",
+  "dependencies": {
+    "express": "^4.12.4",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.3"
+  }
+}
