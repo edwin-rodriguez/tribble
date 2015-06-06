@@ -12,7 +12,7 @@ app.get('/', function(req, res){
 	res.send('hello tribble!');
 });
 
-app.listen(5000, function(){
+app.listen(80, function(){
 	console.log('Tribble app listening...');
 });
 
