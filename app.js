@@ -12,8 +12,10 @@ app.get('/', function(req, res){
 	res.send('hello tribble!');
 });
 
-app.listen(process.env.PORT || 5000, function(){
-	console.log('Tribble app listening...');
+//launch
+var port = process.env.PORT || 5000;
+app.listen(port, function(){
+	console.log('Tribble app listening at port ' + port + '...');
 });
 
 module.exports = app;
