@@ -1,5 +1,5 @@
 {
-  "name": "tribble",
+  "name": "api.tribble",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/edwin-rodriguez/tribble#readme",
   "dependencies": {
+    "body-parser": "^1.12.4",
     "express": "^4.12.4",
     "gulp": "^3.9.0",
-    "gulp-nodemon": "^2.0.3"
+    "gulp-nodemon": "^2.0.3",
+    "mongoose": "^4.0.5",
+    "request": "^2.58.0"
   }
 }
