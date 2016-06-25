@@ -7,7 +7,8 @@ var ArticleSchema = new Schema({
 	description: {type:String},
 	isVisible: {type:Boolean, default:true},
 	sections: [ {type:Schema.ObjectId, required:true} ],
-	tags: [ {type:String, required:true, match: /^[a-zA-Z0-9]+$/} ]
+	tags: [ {type:String, required:true, match: /^[a-zA-Z0-9]+$/} ],
+	images: [ {type:String, required:true} ]
 });
 
 module.exports = mongoose.model('Article', ArticleSchema);
