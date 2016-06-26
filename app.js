@@ -21,14 +21,8 @@ app.use(function(req, res, next) {
 });
 
 //custom routes
-var storeRoutes = require('./routes/routes.store')();
-var articleRoutes = require('./routes/routes.article')();
-var sectionRoutes = require('./routes/routes.section')();
-var sectionRoutes = require('./routes/routes.images')();
-app.use('/stores', storeRoutes);
-app.use('/articles', articleRoutes);
-app.use('/sections', sectionRoutes);
-app.use('/images', sectionRoutes);
+var apiRouter = require('./routes/routes')();
+app.use('/', apiRouter);
 
 //root route
 app.get('/', function(req, res){
