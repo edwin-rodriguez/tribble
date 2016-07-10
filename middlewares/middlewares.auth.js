@@ -1,4 +1,5 @@
-var request = require('request');
+var request = require('request'),
+	config = require('../config');
 
 var auth = {
 	authorize: function (req, res, next) {
@@ -6,7 +7,7 @@ var auth = {
 		if (header) {
 			var token = header.split(' ')[1];
 
-			request.get('http://localhost:3000/authenticate', {
+			request.get(config.AUTH_SERVICE_URL+'authenticate', {
 				'auth': {
 					'bearer': token
 				}

@@ -11,7 +11,7 @@ var routes = function () {
   //stores
 	router.route('/stores/')
 		.get(storesCtrl.get)
-		.post(auth.authorize, storesCtrl.post);
+		.post(storesCtrl.post);
 	router.route('/stores/:id')
 		.get(storesCtrl.getById)
 		.delete(auth.authorize, storesCtrl.deleteById);

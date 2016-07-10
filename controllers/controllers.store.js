@@ -24,14 +24,20 @@ var ctrl = {
 		});
 	},
 	post: function(req,res){
-		var store = new storeModel(req.body);
+		//create model
+		var storeObj = {
+			name: req.body.name,
+			//autogenerate alias
+			alias: req.body.name.replace(/[^a-zA-Z0-9]*/g,'')
+		};
+		var store = new storeModel(storeObj);
 
+		//save
 		store.save(function(err){
 			if (err) {
 				res.status(500).send(err);
 			} else {
-				res.status(201);
-				res.json(store);
+				res.status(201).json(store);
 			}
 		});
 	},
