@@ -14,6 +14,7 @@ var routes = function () {
 		.post(storesCtrl.post);
 	router.route('/stores/:id')
 		.get(storesCtrl.getById)
+		.put(auth.authorize, storesCtrl.putById)
 		.delete(auth.authorize, storesCtrl.deleteById);
 
   //sections

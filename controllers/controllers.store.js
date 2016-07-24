@@ -41,6 +41,27 @@ var ctrl = {
 			}
 		});
 	},
+	putById: function(req,res){
+		var id = req.params.id;
+
+		//find & save
+		storeModel.findById(id, function (err, store){
+			if (err) { res.status(500).send(err); return; }
+
+			//update data
+			store.name = req.body.name;
+			store.alias = req.body.name.replace(/[^a-zA-Z0-9]*/g,'');
+			store.url = req.body.url;
+			store.tags = req.body.tags;
+			store.description = req.body.description;
+
+			//save
+			store.save(function (err){
+				if(err){ res.status(500).send(err); return; }
+				res.status(201).json(store);
+			});
+		});
+	},
 	deleteById: function(req, res){
 		var id = req.params.id;
 
